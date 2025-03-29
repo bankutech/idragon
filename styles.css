@@ -1,0 +1,93 @@
+body { 
+    margin: 0;
+    overflow: hidden;
+    text-align: center; 
+    background: url('background.jpeg') no-repeat center center/cover; 
+    color: white; 
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.game-container {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 40px);
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.mario {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('mario.png') no-repeat center center/contain;
+    bottom: 10px;
+    left: 50px;
+    z-index: 10;
+}
+
+.coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('coin.jpg') no-repeat center center/contain;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('dino.png') no-repeat center center/contain;
+    z-index: 5;
+}
+
+.obstacleAni {
+    animation: obstacleAni 3s infinite linear;
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+.bullet {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: red;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.score-display {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 30;
+    visibility: hidden;
+}

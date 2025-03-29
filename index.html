@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Shooting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-display">Score: <span id="score">0</span></div>
+        <div class="mario" id="mario"></div>
+    </div>
+    <audio id="shootSound" src="fire.mp3" preload="auto"></audio>
+    <audio id="enemyHitSound" src="https://www.fesliyanstudios.com/play-mp3/657" preload="auto"></audio>
+    <audio id="marioDeathSound" src="Mario Death - Sound Effect (HD).mp3" preload="auto"></audio>
+    <audio id="marioJumpSound" src="Mario Jump - Gaming Sound Effect (HD).mp3" preload="auto"></audio>
+    <audio id="themeSong" src="Super Mario Bros. Theme Song.mp3" preload="auto" loop></audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
